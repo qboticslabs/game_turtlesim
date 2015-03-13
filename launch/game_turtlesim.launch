@@ -1,0 +1,13 @@
+<launch>
+  <!-- для джойстика  -->
+  <param name="joy_node" value="/dev/input/js0" />
+  <node name="joy_node" pkg="joy" type="joy_node" />
+  <!-- запуск turtlesim  -->
+  <node name="turtlesim_node" pkg="turtlesim" type="turtlesim_node" />
+  <!-- запуск turtlesim_joy  -->
+  <node name="sub_turtle1_pose" pkg="game_turtlesim" type="turtle1_pose.py" />
+  <!-- запуск turtlesim_joy  -->
+  <node name="sub_turtle1_joy" pkg="game_turtlesim" type="turtlesim_joy.py" />
+  <!-- запуск turtle1_go  -->
+  <node name="turtle1_go" pkg="game_turtlesim" type="turtle1_go.py" />
+</launch>
